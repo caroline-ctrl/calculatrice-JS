@@ -13,40 +13,50 @@
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td colspan="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2">clear</td>
-            <td colspan="2">%</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>*</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <td>=</td>
-            <td>0</td>
-            <td>.</td>
-            <td>/</td>
-        </tr>
-    </table>
+    <div class="row">
+        <div class="col-6">
 
+            <table>
+                <tr>
+                    <td colspan="4" id="result"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" onclick="delete_data()">clear</td>
+                    <td id="%" colspan="2" onclick="get_signe('%')">%</td>
+                </tr>
+                <tr>
+                    <td onclick="get_number(7)">7</td>
+                    <td onclick="get_number(8)">8</td>
+                    <td onclick="get_number(9)">9</td>
+                    <td id="*" onclick="get_signe('*')">*</td>
+                </tr>
+                <tr>
+                    <td onclick="get_number(4)">4</td>
+                    <td onclick="get_number(5)">5</td>
+                    <td onclick="get_number(6)">6</td>
+                    <td id="-" onclick="get_signe('-')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="get_number(1)">1</td>
+                    <td onclick="get_number(2)">2</td>
+                    <td onclick="get_number(3)">3</td>
+                    <td id="+" onclick="get_signe('+')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="operation()">=</td>
+                    <td onclick="get_number(0)">0</td>
+                    <td>.</td>
+                    <td id="/" onclick="get_signe('/')">/</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="col-6">
+            <div><span id="numb1"></span> <span id="signes"></span> <span id="numb2"></span></div>
+            <div>égal <span id="egal"></span></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
